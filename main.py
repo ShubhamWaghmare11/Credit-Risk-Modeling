@@ -1,5 +1,4 @@
 import streamlit as st
-import pickle
 import pandas as pd
 import io
 import matplotlib.pyplot as plt
@@ -18,8 +17,7 @@ st.subheader("")
 st.write("Note: Make sure the excel file contains following columns with defined values and the column names are same as the names in Variable Name: ")
 st.table(pd.read_excel(r"info.xlsx"))
 # Load the trained model
-with open("model.pkl",'rb') as f:
-    model = pickle.load(f)
+model = pd.read_pickle('model.pkl')
 
 # Define column names
 cols_in_df = ['pct_tl_open_L6M', 'pct_tl_closed_L6M', 'Tot_TL_closed_L12M', 'pct_tl_closed_L12M', 'Tot_Missed_Pmnt', 
