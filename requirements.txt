@@ -6,3 +6,4 @@ openpyxl
 streamlit
 scikit-learn
 xgboost
+XlsxWriter
