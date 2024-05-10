@@ -5,3 +5,4 @@ seaborn
 openpyxl
 streamlit
 scikit-learn
+xgboost
